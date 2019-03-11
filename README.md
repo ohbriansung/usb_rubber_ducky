@@ -35,7 +35,7 @@ wget -O ~/Downloads/duckencoder.jar https://github.com/hak5darren/USB-Rubber-Duc
 * Use duckencoder.jar from *step1* to compile and load the script we just created into microSD card
 
 ```shell
-java -jar ~/Downloads/duckencoder.jar  -i ~/rubber-ducky/hello-world.txt -o /Volumes/NO\ NAME/inject.bin
+java -jar ~/Downloads/duckencoder.jar  -i ~/Downloads/ducky-script.txt -o /Volumes/NO\ NAME/inject.bin
 ```
 
 ### 5. Insert the mcroSD card into the keyboard adapter and attack a computer by plugging the keyboard adapter into target

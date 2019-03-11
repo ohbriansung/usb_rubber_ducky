@@ -49,3 +49,16 @@ java -jar ~/Downloads/duckencoder.jar  -i ./usb_rubber_ducky/auto_mac_pw_grab/du
 ```
 
 ### Insert the microSD card into your USB Rubber Ducky and plug your device into any mac!
+
+## Acknowledgement
+
+This is a course project developed at University of San Francisco. Only for academic or personal use, not for any commercial purpose.
+
+## Author
+
+* **Brian Sung** - *Graduate student in department of Computer Science at University of San Francisco* - [LinkedIn](https://www.linkedin.com/in/ohbriansung/)
+
+## Reference
+
+\[1\] https://github.com/hak5darren/USB-Rubber-Ducky
+\[2\] https://github.com/danielmiessler

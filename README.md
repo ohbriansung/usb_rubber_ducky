@@ -18,7 +18,11 @@ USB Rubber Ducky is a device looks like a normal thumb drive. However, for compu
 
 ## Steps to exploit a host
 
-### 1. Download and install the duck encoder for compiling payloads
+### 1. [Download](https://github.com/hak5darren/USB-Rubber-Ducky) the duck encoder jar file for compiling payloads
+
+```shell
+wget -O ~/Downloads/duckencoder.jar https://github.com/hak5darren/USB-Rubber-Ducky/raw/master/duckencoder.jar
+```
 
 ### 2. Insert the microSD card to your computer with its adapter
 
@@ -28,7 +32,7 @@ USB Rubber Ducky is a device looks like a normal thumb drive. However, for compu
 
 ### 4. Compile ducky script into **inject.bin**
 
-* Use duckencoder.jar to compile and load the script we just created into microSD card
+* Use duckencoder.jar from *step1* to compile and load the script we just created into microSD card
 
 ```shell
 java -jar ~/Downloads/duckencoder.jar  -i ~/rubber-ducky/hello-world.txt -o /Volumes/NO\ NAME/inject.bin
@@ -36,7 +40,9 @@ java -jar ~/Downloads/duckencoder.jar  -i ~/rubber-ducky/hello-world.txt -o /Vol
 
 ### 5. Insert the mcroSD card into the keyboard adapter and attack a computer by plugging the keyboard adapter into target
 
+## My Payloads
 
+### 1. [Automatic Mac Password Grabber](./auto_mac_pw_grab/)
 
 ## References
 

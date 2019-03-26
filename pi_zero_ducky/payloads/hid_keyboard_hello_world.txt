@@ -1,0 +1,27 @@
+# real keyboard IDs from Macbook Pro 2018
+USB_VID="0x05ac"        # Vendor ID
+USB_PID="0x027b"        # Product ID
+USE_RNDIS=true          # If true RNDIS will be enabled
+USE_HID=true            # If true HID (keyboard) will be enabled
+HID_KEYBOARD_TEST=true  # Enable onKeyboardUp() function
+lang="us"               # Keyboard language
+
+function onKeyboardUp()
+{
+
+        cat <<- EOF | duckhid
+
+                GUI SPACE
+                DELAY 500
+                STRING terminal
+                DELAY 100
+                ENTER
+                DELAY 2000
+                STRING echo "hello world"
+                DELAY 500
+                ENTER
+                DELAY 500
+
+        EOF
+
+}

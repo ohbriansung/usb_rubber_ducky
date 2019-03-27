@@ -25,7 +25,7 @@ DELAY 300
 STRING echo "osascript -e 'set volume 7'" >> /tmp/youuuuutube.sh
 ENTER
 DELAY 300
-STRING echo "open https://youtu.be/34Udmn2EtzY?t=1" >> /tmp/youuuuutube.sh
+STRING echo "open https://www.youtube.com/watch?v=dQw4w9WgXcQ&frags=pl%2Cwn" >> /tmp/youuuuutube.sh
 ENTER
 DELAY 300
 STRING echo "history -c && rm .bash_history" >> /tmp/youuuuutube.sh

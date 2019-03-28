@@ -4,7 +4,7 @@ There are some threads about P4wnP1 ducky not running on Mac but here is an intr
 
 ## Demo Video
 
-[![Brian Ducky Raspberry Pi Zero demo](https://img.youtube.com/vi/vyz5C6BCJAE/0.jpg)](https://www.youtube.com/watch?v=vyz5C6BCJAE)
+[![Brian Ducky Raspberry Pi Zero demo](https://img.youtube.com/vi/IrasdisNsJk/0.jpg)](https://www.youtube.com/watch?v=IrasdisNsJk)
 
 ## Requirements
 

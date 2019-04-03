@@ -115,7 +115,7 @@ screencapture ~/a.jpg
 
 - ~~Take a photo with Mac's webcam~~
 
-apparently, Apple has a very strong security and privacy. It's nearly impossible to control hardware like webcam or mic without operating on the machine.
+Apparently, Apple has a very strong security and privacy. It's nearly impossible to control hardware like webcam or mic without really operating on the machine.
 
 ## Author and Contributors
 

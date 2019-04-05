@@ -1,5 +1,7 @@
 # Ducky Raspberry Pi Zero for Mac
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/LICENSE)
+
 There are some threads about P4wnP1 ducky not running on Mac but here is an introduction about setting up P4wnP1 so your pi zero can attack Mac.
 
 ## Demo Video

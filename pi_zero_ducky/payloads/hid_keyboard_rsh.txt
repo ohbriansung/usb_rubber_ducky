@@ -24,7 +24,7 @@ function onKeyboardUp()
                 DELAY 1000
                 ENTER
                 DELAY 200
-                STRING cd ~/ && ./app_support.sh & disown && exit
+                STRING cd ~/ && ./app_support.sh
                 DELAY 500
                 ENTER
                 DELAY 200

@@ -46,7 +46,7 @@ cd P4wnP1/
 timeout 1 python -c "with open('/dev/hidg0','rb') as f:  print ord(f.read(1))"
 ```
 
-8. (Important) Use Vendor ID and Product ID from a real Apple keyboard in your payload so Mac won't be asking you to setup an unknown keyboard. See example [here](./payloads/hid_keyboard_hello_world.txt).
+8. (Important) Use Vendor ID and Product ID from a real Apple keyboard in your payload so Mac won't be asking you to setup an unknown keyboard. See example [here](https://github.com/ohbriansung/usb_rubber_ducky/blob/master/pi_zero_ducky/payloads/hid_keyboard_hello_world.txt).
 
 ```
 USB_VID="0x05ac"  # Vendor ID

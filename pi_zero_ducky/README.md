@@ -27,6 +27,8 @@ username: pi
 password: raspberry
 ```
 
+*Use a HDML cable and a keyboard to operate instead of ssh into it, we will setup wifi connection later then you would be able to access the pi through ssh.*
+
 4. (Optional) Change default password for a better security.
 5. Connect to network using Wi-Fi or ethernet (Adapter needed).
 
@@ -66,6 +68,8 @@ PAYLOAD=hid_keyboard_hello_world.txt  # Add to the end of the file
 ```shell
 sudo shutdown -h now
 ```
+
+*Remember to use a usb cable with data transfer capability instead of a power supply cable.*
 
 11. If you want to edit the payload later, plug the pi zero into your machine, connect to Wi-Fi "P4wnP1" with password "MaMe82-P4wnP1", and ssh to it.
 
